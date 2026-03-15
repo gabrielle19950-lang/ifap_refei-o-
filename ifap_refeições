@@ -1,0 +1,21 @@
+CREATE DATABASE if_refeicoes;
+USE if_refeicoes;
+
+CREATE TABLE categorias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT
+);
+
+CREATE TABLE refeicoes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10,2),
+    imagem VARCHAR(255),
+    categoria_id INT,
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+);
+INSERT INTO categorias (nome, descricao) VALUES
+
+INSERT INTO refeicoes (nome, descricao, preco, categoria_id) VALUES
